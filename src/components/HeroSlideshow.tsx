@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
-import l1 from "@/assets/hero/law1.jpg";
-import l2 from "@/assets/hero/law2.jpg";
 import l3 from "@/assets/hero/law3.jpg";
 import l4 from "@/assets/hero/law4.jpg";
 import l5 from "@/assets/hero/law5.jpg";
 import l6 from "@/assets/hero/law6.jpg";
-import l7 from "@/assets/hero/law7.jpg";
 import l8 from "@/assets/hero/law8.jpg";
 import l9 from "@/assets/hero/law9.jpg";
 import l10 from "@/assets/hero/law10.jpg";
 
-const slides = [l1, l2, l3, l4, l5, l6, l7, l8, l9, l10];
+const slides = [l5, l3, l6, l10, l9, l4, l8];
 
 export function HeroSlideshow() {
   const [i, setI] = useState(0);

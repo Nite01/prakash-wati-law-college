@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { HeroSlideshow } from "./HeroSlideshow";
 
 export const COLLEGE = {
   name: "Major OP Singh Prakash Wati College of Law",
@@ -91,11 +92,12 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
 export function PageHeader({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
-    <section className="bg-secondary border-b border-border">
-      <div className="mx-auto max-w-6xl px-4 py-14">
+    <section className="bg-primary text-primary-foreground relative overflow-hidden w-full">
+      <HeroSlideshow />
+      <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div className="h-1 w-16 bg-accent mb-4" />
-        <h1 className="font-display text-4xl md:text-5xl text-primary">{title}</h1>
-        {subtitle && <p className="mt-3 text-muted-foreground max-w-2xl">{subtitle}</p>}
+        <h1 className="font-display text-4xl md:text-5xl">{title}</h1>
+        {subtitle && <p className="mt-3 opacity-85 max-w-2xl">{subtitle}</p>}
       </div>
     </section>
   );
