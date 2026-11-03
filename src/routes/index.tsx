@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { COLLEGE, SiteLayout } from "@/components/SiteLayout";
+import { HeroSlideshow } from "@/components/HeroSlideshow";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,9 +24,9 @@ const facts = [
 function Index() {
   return (
     <SiteLayout>
-      <section className="bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 text-[28rem] leading-none text-right pr-8 font-display select-none">⚖</div>
-        <div className="relative mx-auto max-w-6xl px-4 py-24 md:py-32">
+      <section className="bg-primary text-primary-foreground relative overflow-hidden w-full">
+        <HeroSlideshow />
+        <div className="relative mx-auto max-w-6xl px-4 py-24 md:py-36">
           <p className="uppercase tracking-[0.3em] text-xs text-accent">Admissions Open · Session {COLLEGE.established}</p>
           <h1 className="font-display text-4xl md:text-6xl mt-4 max-w-3xl leading-tight">
             Shaping the Advocates of Tomorrow

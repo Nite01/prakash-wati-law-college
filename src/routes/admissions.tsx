@@ -51,6 +51,20 @@ function Admissions() {
             </div>
           ))}
         </div>
+        <div className="mt-12 bg-card border border-border rounded-lg p-6">
+          <h2 className="font-display text-2xl text-primary">Required Documents for Admission</h2>
+          <ul className="mt-4 grid sm:grid-cols-2 gap-3">
+            {COLLEGE.documents.map((d) => (
+              <li key={d} className="flex items-center gap-3 border-l-4 border-accent bg-secondary px-4 py-3 rounded-r-md">
+                <span className="text-accent font-bold">✓</span>
+                <span>{d}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-sm text-muted-foreground">
+            For queries contact {COLLEGE.contactPerson} at +91 {COLLEGE.phone} or {COLLEGE.email}.
+          </p>
+        </div>
         <div className="mt-12 text-center">
           <Link to="/contact" className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold">Enquire Now</Link>
         </div>
