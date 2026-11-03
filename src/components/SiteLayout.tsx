@@ -10,6 +10,16 @@ export const COLLEGE = {
   affiliation: "Dr. B.R. Ambedkar University, Agra",
   approval: "Bar Council of India, New Delhi",
   established: "2026",
+  contactPerson: "Varun Kumar",
+  phone: "7088806669",
+  email: "raghukul05613@gmail.com",
+  documents: [
+    "High School Marksheet",
+    "Inter Marksheet",
+    "Graduation Marksheet (All Years)",
+    "Aadhar Card",
+    "Passport Size Photo",
+  ],
 };
 
 const nav = [
@@ -64,6 +74,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div>
             <div className="font-semibold mb-2">Address</div>
             <p className="opacity-80">{COLLEGE.address}</p>
+            <p className="opacity-80 mt-2">{COLLEGE.contactPerson}: <a href={`tel:+91${COLLEGE.phone}`}>+91 {COLLEGE.phone}</a></p>
+            <p className="opacity-80"><a href={`mailto:${COLLEGE.email}`}>{COLLEGE.email}</a></p>
           </div>
           <div>
             <div className="font-semibold mb-2">Recognition</div>

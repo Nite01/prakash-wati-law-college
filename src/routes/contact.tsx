@@ -25,6 +25,12 @@ function Contact() {
             <p className="font-semibold text-primary mt-1 text-lg">{COLLEGE.name}</p>
             <p className="mt-1">{COLLEGE.address}</p>
           </div>
+          <div className="border-l-4 border-accent bg-secondary p-6 rounded-r-md space-y-1">
+            <div className="text-xs uppercase tracking-widest text-muted-foreground">Admissions Contact</div>
+            <p className="font-semibold text-primary text-lg">{COLLEGE.contactPerson}</p>
+            <p>Mobile: <a className="text-primary font-semibold" href={`tel:+91${COLLEGE.phone}`}>+91 {COLLEGE.phone}</a></p>
+            <p>Email: <a className="text-primary font-semibold break-all" href={`mailto:${COLLEGE.email}`}>{COLLEGE.email}</a></p>
+          </div>
           <p className="text-muted-foreground">Office hours: Monday – Saturday, 10:00 AM – 4:00 PM</p>
         </div>
         <iframe
